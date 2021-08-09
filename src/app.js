@@ -1,7 +1,12 @@
-var template = 
-<div>
-    <p>Funciona!</p>
-</div>;
-var appRoot = document.getElementById("app");
+class Header extends React.Component {
+    render(){
+        return <p>This is from header</p>;
+    }
+}
 
-ReactDOM.render(template, appRoot);
+const jsx = (
+    <div>
+    <Header />
+    </div>
+)
+ReactDOM.render(jsx, document.getElementById('app'))
