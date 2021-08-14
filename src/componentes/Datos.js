@@ -3,14 +3,18 @@ import Dato from './Dato';
 
 const Datos = (props) => {
     return(
-        <div>
+        <div className='datos'>
+            <div>
+                <h3>Datos ingresados:</h3>
+            </div>
         {props.datos.map((dato) =><Dato 
                                     key={dato[0]} 
                                     dato={dato} 
                                     removeIndividualData={props.removeIndividualData}
+                                    className='container'
                                     />)}
-        <button onClick={props.resetData}>Borrar todo</button>
-    </div>
+        <button onClick={props.resetData} className='big__button'>Borrar todo</button>
+        </div>
     );
 }
 

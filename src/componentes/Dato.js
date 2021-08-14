@@ -3,8 +3,10 @@ import React from 'react';
 const Dato = (props) => {
     return (
         <div>
-                {props.dato.join(" ")}
-                <button onClick={(e) => props.removeIndividualData(props.dato)}>Eliminar</button>
+                <div className='dato'>
+                    {props.dato.join(" ")}
+                    <button onClick={(e) => props.removeIndividualData(props.dato)} className='buttton_option'>Eliminar</button>
+                </div>
         </div>
     );
 }

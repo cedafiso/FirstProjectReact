@@ -25,21 +25,29 @@ export default class AddDatos extends React.Component {
     }
     render() {
         return (
-            <div>
-                <form onSubmit={this.fetchData}>
-                    <h4 id='label_datos'>Nombre:</h4>
-                    <input type='text' name='nombre'></input>
-                    <h4 id='label_datos'>ID:</h4>
-                    <input type='text' name='id'></input>
-                    <h4 id='label_datos'>Municipio:</h4>
-                    <input type='text' name='municipio'></input>
-                    <h4 id='label_datos'>Tipo cuerpo de agua:</h4>
-                    <input type='text' name='tipo_cuerpo'></input>
-                    <h4 id='label_datos'>Tipo agua:</h4>
-                    <input type='text' name='tipo_agua'></input>
-                    <h4 id='label_datos'>IRCA: </h4>
-                    <input type='text' name='irca'></input>
-                    <button>Ingresar</button>
+            <div className ='addDatos'>
+                <form 
+                onSubmit={this.fetchData}
+                >
+                    <div className='form'>
+                        <div className='addDatos__columna'>
+                        <h4 id='label_datos'>Nombre:</h4>
+                        <input type='text' name='nombre'></input>
+                        <h4 id='label_datos'>ID:</h4>
+                        <input type='text' name='id'></input>
+                        <h4 id='label_datos'>Municipio:</h4>
+                        <input type='text' name='municipio'></input>
+                        </div>
+                        <div className='addDatos__columna'>
+                        <h4 id='label_datos'>Tipo cuerpo de agua:</h4>
+                        <input type='text' name='tipo_cuerpo'></input>
+                        <h4 id='label_datos'>Tipo agua:</h4>
+                        <input type='text' name='tipo_agua'></input>
+                        <h4 id='label_datos'>IRCA: </h4>
+                        <input type='text' name='irca'></input>
+                        </div>
+                    </div>
+                    <button className='button'>Ingresar</button>
                 </form>
             </div>
         );

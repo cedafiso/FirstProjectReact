@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import AddDatos from './AddDatos';
 import Datos from './Datos'
+import Confirmacion from './Confirmacion';
 
 export default class Reto3 extends React.Component{
     constructor(props){
@@ -9,8 +10,11 @@ export default class Reto3 extends React.Component{
         this.fetchData = this.fetchData.bind(this);
         this.resetData = this.resetData.bind(this);
         this.removeIndividualData = this.removeIndividualData.bind(this);
+        this.resetDataAll = this.resetDataAll.bind(this);
+        this.clearModal = this.clearModal.bind(this);
         this.state = {
-            datos : []
+            datos : [],
+            confirmacion: false
         };
     }
     removeIndividualData(datoToRemove){
@@ -22,7 +26,21 @@ export default class Reto3 extends React.Component{
 
     }
     resetData(){
-        this.setState(() =>({datos :[]}));
+        this.setState(()=> {
+            return {
+                confirmacion: true
+            }
+        });
+    }
+    resetDataAll(){
+        this.setState(() =>({datos :[], confirmacion: false}));
+    }
+    clearModal(){
+        this.setState(()=> {
+            return {
+                confirmacion: false
+            }
+        });
     }
     fetchData(nombre, id, municipio ="NN", tipoCuerpo="NN", tipo_agua="NN", irca="0.0"){
         this.setState((prevState) => {
@@ -39,13 +57,20 @@ export default class Reto3 extends React.Component{
         return(
             <div>
                 <Header title={title} subtitle={subtitle} />
-                <AddDatos
-                fetchData={this.fetchData}
-                />
-                <Datos 
-                datos={this.state.datos}
-                removeIndividualData={this.removeIndividualData}
-                resetData={this.resetData}
+                <div className='container'>
+                    <AddDatos
+                    fetchData={this.fetchData}
+                    />
+                    <Datos 
+                    datos={this.state.datos}
+                    removeIndividualData={this.removeIndividualData}
+                    resetData={this.resetData}
+                    />
+                </div>
+                <Confirmacion
+                    resetDataAll={this.resetDataAll}
+                    confirmacion={this.state.confirmacion}
+                    clearModal={this.clearModal}
                 />
             </div>
         );
