@@ -4,7 +4,7 @@ const Dato = (props) => {
     return (
         <div>
                 <div className='dato'>
-                    {props.dato.join(" ")}
+                    {props.count+'. '+props.dato.join(" ")}
                     <button onClick={(e) => props.removeIndividualData(props.dato)} className='buttton_option'>Eliminar</button>
                 </div>
         </div>

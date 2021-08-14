@@ -1,0 +1,15 @@
+.widget{
+    background-color: $ligh-blue;
+    margin: auto;
+    text-align: center;
+}
+.widget__header{
+    text-align: left;
+    background-color: $blue;
+    color:$text-color;
+    padding: 2rem;
+    margin-bottom: 1rem;
+}
+.widget__title{
+    margin: 0;
+}

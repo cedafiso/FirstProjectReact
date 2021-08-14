@@ -11,3 +11,28 @@
     justify-content: space-evenly;
     margin-bottom: 3.5rem;
 }
+.addDatos__columna{
+    input{
+        flex-grow: 1;
+    }
+}
+@media (max-width: 45rem){
+    .form{
+        flex-direction: column;
+        margin-bottom: 3.5rem;
+    }
+    .addDatos__columna{
+        text-align: center;
+        padding-left: 20%;
+        padding-right: 40%;
+        padding-bottom: 0;
+        margin: 0;
+    }
+    h4{
+        text-align: left;
+    }
+    input{
+        flex-grow: 1;
+        width: 100%;
+    }
+}
