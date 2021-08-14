@@ -1,8 +1,8 @@
 {
-  "name": "FirstProjectReact",
+  "name": "BoilerPlateReact",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/cedafiso/FirstProjectReact.git",
+  "repository": "https://github.com/cedafiso/BoilerPlateReact.git",
   "author": "cedafiso <cedafiso@gmail.com>",
   "license": "MIT",
   "scripts": {
