@@ -1,7 +1,7 @@
 const path = require('path');
 module.exports = {
     mode:'development',
-    entry: './src/app.js',
+    entry: './src/playground/redux-101.js',
     output: {
         path: path.join(__dirname, 'public'),
         filename: 'bundle.js'
@@ -23,5 +23,6 @@ module.exports = {
     },
     devServer: {
         contentBase: path.join(__dirname, 'public'),
+        historyApiFallback:true
     }
 };
